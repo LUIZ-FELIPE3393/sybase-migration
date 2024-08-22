@@ -41,7 +41,6 @@
 ##
 #############################################################################
 
-from fbs_runtime.application_context.PyQt5 import ApplicationContext
 from PyQt5.QtCore import QDateTime, Qt, QTimer
 from PyQt5.QtWidgets import (QApplication, QCheckBox, QComboBox, QDateTimeEdit,
         QDial, QDialog, QGridLayout, QGroupBox, QHBoxLayout, QLabel, QLineEdit,
@@ -232,10 +231,3 @@ class WidgetGallery(QDialog):
         timer = QTimer(self)
         timer.timeout.connect(self.advanceProgressBar)
         timer.start(1000)
-
-
-if __name__ == '__main__':
-    appctxt = ApplicationContext()
-    gallery = WidgetGallery()
-    gallery.show()
-    sys.exit(appctxt.app.exec())
